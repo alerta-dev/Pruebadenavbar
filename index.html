@@ -7,44 +7,91 @@
   <link rel="icon" href="favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-<style>
-    /* Estilos compartidos para la página */
+  <style>
     body {
       font-family: 'Poppins', sans-serif;
-    background-color: white;  /* Fondo blanco */
-    color: white;  /* Texto en negro para buen contraste */
-    margin: 0;  /* Elimina márgenes por defecto */
-    padding: 0; /* Elimina padding por defecto */  
-}
-  .navbar {
+      background-color: white;
+      color: black;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
       background: rgba(0, 0, 0, 0.9);
       display: flex;
       align-items: center;
       justify-content: space-around;
       padding: 1rem 2rem;
- }
-  
+      position: relative;
+    }
+
     .navbar a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
+      padding: 0.5rem 1rem;
+      position: relative;
     }
-  
-  .logo {
-  width: 130px;
-  height: auto; 
-}
-</style>
+
+    .logo {
+      width: 130px;
+      height: auto;
+    }
+
+    /* Contenedor del submenú */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #222;
+      min-width: 160px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+      border-radius: 5px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #333;
+    }
+
+    /* Mostrar submenú al pasar el cursor */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <!-- NAVBAR -->
+
   <nav class="navbar">
     <a href="index.html">
-    <img src="logo.png" alt="Logo" class="logo">
+      <img src="logo.png" alt="Logo" class="logo">
     </a>
-    <a href="index.html">Inicio</a>
+
+    <div class="dropdown">
+      <a href="index.html">Inicio</a>
+      <div class="dropdown-content">
+        <a href="#categoria1">Categoría 1</a>
+        <a href="#categoria2">Categoría 2</a>
+        <a href="#categoria3">Categoría 3</a>
+      </div>
+    </div>
+
     <a href="ranking.html">Ranking</a>
     <a href="registro.html">Registro</a>
     <a href="rondas.html">Rondas</a>
   </nav>
+
 </body>
+</html>
