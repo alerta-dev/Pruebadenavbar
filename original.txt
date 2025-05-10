@@ -1,0 +1,17 @@
+original
+
+
+
+   .navbar {
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 1rem 2rem;
+    }
+    
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
